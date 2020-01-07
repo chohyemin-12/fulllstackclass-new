@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use("/", router);
 
 router.get("/",(req, res) => {
-    res.sendFile(`${path}/web-client/index.html`);
+    res.sendFile(`${path}/web-client/react.html`);
 });
 
 app.listen(_webPort, () => {
