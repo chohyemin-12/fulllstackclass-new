@@ -1,7 +1,7 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const cors = require("cors");
-const _webPort = 1004;
+const _webPort = 80;
 global.app = express();
 app.use(cors());
 global.router = express.Router();
@@ -14,5 +14,5 @@ router.get("/",(req, res) => {
 });
 
 app.listen(_webPort, () => {
-    console.log(`web server running on ${_webPort}`);
+    console.log(`web server running on ${_webPort}/web-client/app.js`);
 }); 
