@@ -17,10 +17,15 @@
                 Button,
                 CircularProgress,
                 TextField,
+                Checkbox
             } = MaterialUI;
 
             let onLoginClick = function (){
                 Console.log('signed-in');
+            };
+            
+            let handleChange = function () {
+                Console.log('Checked!')
             };
 
             let App = (props) => {
@@ -30,10 +35,15 @@
                         onClick={onLoginClick}>
                         Google Login
                     </Button>
+                    <Checkbox
+                        onChange={handleChange}
+                        value="primary"
+                        inputProps={{ 'aria-label': 'primary checkbox' }}
+                        />
                     <br/>
                     <TextField id="standard-basic" label="Something here!" />
                     <br/>
-                    <CircularProgress/>
+
                     </div>
                  );
             };
