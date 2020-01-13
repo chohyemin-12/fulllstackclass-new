@@ -13,9 +13,6 @@ router.get("/",(req, res) => {
     res.sendFile(`${path}/web-client/react.html`);
 });
 
-// router.get("/app.js", (req, res) => {
-//     res.sendFile(`${path}/web-client/app.js`);
-// });
 
 router.post("/sum", (req, res) => {
     let sum = req.body.param1 + req.body.param2;
@@ -26,5 +23,5 @@ router.post("/sum", (req, res) => {
 })
 
 app.listen(_webPort, () => {
-    console.log(`web server running on ${_webPort}/web-client/app.js`);
+    console.log(`web server running on ${_webPort}`);
 }); 
